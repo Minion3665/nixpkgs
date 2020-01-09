@@ -30951,6 +30951,7 @@ with pkgs;
   libresprite = callPackage ../applications/editors/libresprite {
     inherit (darwin.apple_sdk.frameworks) AppKit Cocoa Foundation;
   };
+  libreoffice-online = callPackage ../applications/office/libreoffice/online { };
 
   libvmi = callPackage ../development/libraries/libvmi { };
 
