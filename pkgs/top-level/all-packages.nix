@@ -491,6 +491,8 @@ with pkgs;
   pridecat = callPackage ../tools/misc/pridecat { };
 
   pridefetch = callPackage ../tools/misc/pridefetch { };
+  
+  queercat = callPackage ../tools/misc/queercat { };
 
   proto-contrib = callPackage ../development/tools/proto-contrib { };
 
