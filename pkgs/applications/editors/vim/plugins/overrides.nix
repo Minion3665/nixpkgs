@@ -1282,6 +1282,7 @@ self: super: {
       "coc-lists"
       "coc-markdownlint"
       "coc-metals"
+      "coc-omnisharp"
       "coc-pairs"
       "coc-prettier"
       "coc-pyright"
