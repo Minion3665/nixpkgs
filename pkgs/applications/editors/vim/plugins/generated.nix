@@ -1684,18 +1684,6 @@ final: prev:
     meta.homepage = "https://github.com/neoclide/coc-neco/";
   };
 
-  coc-spell-checker = buildVimPluginFrom2Nix {
-    pname = "coc-spell-checker";
-    version = "2020-09-15";
-    src = fetchFromGitHub {
-      owner = "iamcco";
-      repo = "coc-spell-checker";
-      rev = "a76ebbff41fec61bb7a3c2556a670720db3f9ff9";
-      sha256 = "0i2znngg8jyxgns1kqi5168c4899wj2b8h8n14yy6pxgidhgqvzp";
-    };
-    meta.homepage = "https://github.com/iamcco/coc-spell-checker/";
-  };
-
   coc-svelte = buildVimPluginFrom2Nix {
     pname = "coc-svelte";
     version = "2022-03-14";
