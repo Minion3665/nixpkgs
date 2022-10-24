@@ -79,6 +79,10 @@ let
   # If you need a grammar that already exists in the official orga,
   # make sure to give it a different name.
   otherGrammars = {
+    "tree-sitter-astro" = {
+      orga = "virchau13";
+      repo = "tree-sitter-astro";
+    };
     "tree-sitter-beancount" = {
       orga = "polarmutex";
       repo = "tree-sitter-beancount";
