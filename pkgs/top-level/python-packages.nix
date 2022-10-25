@@ -3232,6 +3232,8 @@ in {
     pythonPackages = self;
   });
 
+  fake-rpi = callPackage ../development/python-modules/fake-rpi { };
+
   fake-useragent = callPackage ../development/python-modules/fake-useragent { };
 
   faker = callPackage ../development/python-modules/faker { };
