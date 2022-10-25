@@ -11981,6 +11981,8 @@ in {
 
   winsspi = callPackage ../development/python-modules/winsspi { };
 
+  wiringpi = callPackage ../development/python-modules/wiringpi { };
+
   withings-api = callPackage ../development/python-modules/withings-api { };
 
   wktutils = callPackage ../development/python-modules/wktutils { };
