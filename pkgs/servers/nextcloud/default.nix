@@ -6,6 +6,7 @@
   caBundle ? "${cacert}/etc/ssl/certs/ca-bundle.crt",
   nextcloud30Packages,
   nextcloud31Packages,
+  nextcloud33Packages,
   buildNpmPackage,
   fetchFromGitHub,
   php,
@@ -35,18 +36,20 @@ let
           name,
           version,
           hash,
+          rev ? null,
         }:
         fetchFromGitHub {
           inherit name hash;
           owner = "nextcloud";
           repo = name;
-          rev = "refs/tags/v${version}";
+          rev = if rev != null then rev else "refs/tags/v${version}";
           fetchSubmodules = true;
         };
       src = fetchNextcloudRepo {
         inherit version;
         name = "server";
         hash = hashes.server.src;
+        rev = hashes.server.rev or null;
       };
       dist = buildNpmPackage {
         inherit
@@ -63,6 +66,7 @@ let
           runHook prePatch
 
           rm -rf Makefile dist
+          patchShebangs --build build/demi.sh
 
           runHook postPatch
         '';
@@ -78,10 +82,12 @@ let
         inherit version;
         name = "example-files";
         hash = hashes.${name}.src;
+        rev = hashes.${name}.rev or null;
       };
       documentation = callPackage ./documentation.nix {
         # The documentation is not versioned, so the correct commit hash has to be set manually.
         rev =
+          hashes.documentation.rev or
           {
             "30.0.15" = "e71795c7d2a2d9e64e23f5df815bb2bd982e2480";
             "31.0.9" = "3032c4678d3eb7d690972525572e7974ffd3ccf4";
@@ -96,6 +102,8 @@ let
             !builtins.pathExists "${src}/apps/${shipped_app}"
             # The source of this app is not publicly available
             && shipped_app != "support"
+            && shipped_app != "files_pdfviewer"
+            && shipped_app != "recommendations"
           ) (builtins.fromJSON (builtins.readFile "${src}/core/shipped.json")).shippedApps)
           (
             app:
@@ -104,6 +112,7 @@ let
                 inherit version;
                 name = app;
                 hash = hashes.${app}.src;
+                rev = hashes.${app}.rev or null;
               };
             in
             buildNextcloudApp (
@@ -179,12 +188,60 @@ let
                   cp -r node_modules/vue-demi/lib/v2.7/. node_modules/vue-demi/lib
                 '';
               }
+              // lib.optionalAttrs (app == "files_downloadlimit" && version == "33.3665.20251027") {
+                src = stdenvNoCC.mkDerivation {
+                  inherit src;
+                  name = app;
+
+                  buildPhase = ''
+                    cp ${./files_downloadlimit-v33.3665.20251027-package-lock.json} package-lock.json
+                  '';
+
+                  installPhase = ''
+                    mkdir $out
+                    cp -r ./. $out
+                  '';
+                };
+              }
+              // lib.optionalAttrs (app == "recommendations" && version == "33.3665.20251027") {
+                src = stdenvNoCC.mkDerivation {
+                  inherit src;
+                  name = app;
+
+                  buildPhase = ''
+                    cp ${./recommendations-v33.3665.20251027-package-lock.json} package-lock.json
+                  '';
+
+                  installPhase = ''
+                    mkdir $out
+                    cp -r ./. $out
+                  '';
+                };
+              }
+              // lib.optionalAttrs (app == "files_pdfviewer" && version == "33.3665.20251027") {
+                src = stdenvNoCC.mkDerivation {
+                  inherit src;
+                  name = app;
+
+                  buildPhase = ''
+                    cp ${./files_pdfviewer-v33.3665.20251027-package-lock.json} package-lock.json
+                  '';
+
+                  installPhase = ''
+                    mkdir $out
+                    cp -r ./. $out
+                  '';
+                };
+              }
               //
                 lib.optionalAttrs
                   (
-                    (app == "text" && (version == "30.0.15" || version == "31.0.9"))
-                    || (app == "firstrunwizard" && (version == "30.0.15" || version == "31.0.9"))
-                    || (app == "viewer" && version == "31.0.9")
+                    (app == "text" && (version == "30.0.15" || version == "31.0.9" || version == "33.3665.20251027"))
+                    || (app == "firstrunwizard" && (version == "30.0.15" || version == "31.0.9" || version == "33.3665.20251027"))
+                    || (app == "viewer" && (version == "31.0.9" || version == "33.3665.20251027"))
+                    || (app == "files_downloadlimit" && version == "33.3665.20251027")
+                    || (app == "recommendations" && version == "33.3665.20251027")
+                    || (app == "photos" && version == "33.3665.20251027")
                   )
                   {
                     # Pulls in some peer unnecessary dependencies at build time
@@ -211,12 +268,12 @@ let
         rm -r core/skeleton
         mkdir core/skeleton
         cp -r ${skeleton}/. core/skeleton
-        cp "${documentation}/Nextcloud Manual.pdf" core/skeleton
+        # cp "${/* documentation */ "null"}/Nextcloud Manual.pdf" core/skeleton
 
         rm -r core/doc/user
-        ln -s ${documentation}/user core/doc/user
+        # ln -s ${/* documentation */ "null"}/user core/doc/user
         rm -r core/doc/admin
-        ln -s ${documentation}/admin core/doc/admin
+        # ln -s ${/* documentation */ "null"}/admin core/doc/admin
 
         rm -r dist
         ln -s ${dist} dist
@@ -345,6 +402,7 @@ let
   packages = {
     "30" = nextcloud30Packages;
     "31" = nextcloud31Packages;
+    "33" = nextcloud33Packages;
   };
 in
 lib.mapAttrs' (

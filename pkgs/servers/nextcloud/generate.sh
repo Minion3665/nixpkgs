@@ -9,7 +9,7 @@ for version in $(jq -r 'keys|join(" ")' versions.json); do
   jq -r ".\"$version\".hashes.documentation.src=\"\"" versions.json > "$out"
   mv "$out" versions.json
 
-  for repo in example-files server activity app_api bruteforcesettings circles files_downloadlimit files_pdfviewer firstrunwizard logreader nextcloud_announcements notifications password_policy photos privacy recommendations related_resources serverinfo survey_client suspicious_login text twofactor_nextcloud_notification twofactor_totp viewer; do
+  for repo in example-files server activity bruteforcesettings app_api circles files_downloadlimit firstrunwizard logreader nextcloud_announcements notifications password_policy photos privacy related_resources serverinfo survey_client suspicious_login text twofactor_nextcloud_notification twofactor_totp viewer; do
     if [[ "$(jq -r ".\"$version\".hashes.\"$repo\"" versions.json)" == "null" ]]; then
       drv="$(nix-prefetch-github --json --no-deep-clone --fetch-submodules --rev "v$version" nextcloud "$repo")"
 

@@ -21,6 +21,7 @@ stdenvNoCC.mkDerivation {
     sphinx-rtd-dark-mode
     sphinx-copybutton
     sphinxcontrib-mermaid
+    sphinx-notfound-page
   ];
 
   postPatch = ''

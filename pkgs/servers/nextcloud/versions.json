@@ -237,5 +237,138 @@
         "vendor": "sha256-eHbnaL1ejImULlkWxcYZfD7sSwTjsmVS8JpPR2zw5R0="
       }
     }
+  },
+  "33.3665.20251027": {
+    "hashes": {
+      "documentation": {
+        "rev": "c4bf78af73974f686b18df55bb5fbbf67602911c",
+        "src": "sha256-so88HsWykEFyFtvs6uN97SyKOvlyw75knPvWXjrYfQ0="
+      },
+      "example-files": {
+        "rev": "1e99f7d8abf2adc61b2f93b7ee08d5336b6b3882",
+        "src": "sha256-RrVe58mr3ztdwllHQHWiSxzSEkoT7hwvapUsm1/Gwbw="
+      },
+      "server": {
+        "rev": "18d0f3322e35d07e5302f04688a3a72eb6fb1be8",
+        "src": "sha256-kOT5iK+w6QrxsqLVf/Lkpv5jEmC6SyKSXQN/8SXhuds=",
+        "npmDeps": "sha256-JrEb2ACGwGxxvAP03b2cX7unEtQc0ow1yNXkrvTfi3s="
+      },
+      "activity": {
+        "rev": "b60f4247999a4d3a00926303b3201ad5d61c0c52",
+        "src": "sha256-KpNi60/8gzu1x/DQ+iUqAU9kxjPOUWTJt4uXd45UA9E=",
+        "npmDeps": "sha256-xfgGl9bjEDxQgsMG33XdEo2HW3L9zBBScAhOIZgW6u0=",
+        "vendor": "sha256-k8hFRm/aMrieLt/3nhSOfNDNh7sw3URj1roqiN8DfoI="
+      },
+      "app_api": {
+        "rev": "d960cecaca357c6233c633f53776bcee848f676f",
+        "src": "sha256-D+XibZbP8zjIGyjDd8fwLjS9f5bJVnGkmzKVTR0yuqg=",
+        "npmDeps": "sha256-rDYk74y7CAnbcvc+YsUFYtquTRX3418U9SuSbfZxqJQ=",
+        "vendor": "sha256-CkO8VDSpLUauz1c7o56w71ph8p0zlLXxQIfzplZmpeo="
+      },
+      "bruteforcesettings": {
+        "rev": "65b7f77bbcd84212efadf72c71039d24e6965938",
+        "src": "sha256-u5V/hM57+Et4wXoUMg7z2N36tAlP7I6qsyJfmcPqyKk=",
+        "npmDeps": "sha256-shxfAXPRUMGkiYg7+ty3RgTj44rijNHMVijgxMkc+w4=",
+        "vendor": "sha256-Wy7YaQvmOQ++K8WQLrbHBT2jw9fEQelHcBYdidocF4Y="
+      },
+      "circles": {
+        "rev": "41e02444af70d7ea6b2da924effaf6d9ed6f3597",
+        "src": "sha256-6dzSdyt/oK1TTiqy4iIDfzi3ISn+OWA9l/+OmZLpJpY=",
+        "npmDeps": "sha256-kKJZ5gEi77eegHoQ5zNjIbNwNSoLLKhteR2vsatAIS0=",
+        "vendor": "sha256-ZCdulbR54KMUZ6rGGMVwRMYXCREsFVtuI8EM9gE+0pw="
+      },
+      "files_downloadlimit": {
+        "rev": "675df45356c2bd2111e2ae989018f805a4b31e50",
+        "src": "sha256-nZim/zdUH8gGpLZiCRDhPbRlXF/Y7z040fDG9x0ttqM=",
+        "npmDeps": "sha256-PKOdImduw2V2/JxkUAFcTh+R8YzB1y8PZ6UM+jPRDYg=",
+        "vendor": "sha256-a8R+B1xDrQ5CtpV6mcGUUCLfmElRCXABnuLoUvj5iec="
+      },
+      "firstrunwizard": {
+        "rev": "73945e12907b1ef941d0d78e6f926edb2ed2f796",
+        "src": "sha256-aEPFYg4f+3FQYLYwomRgVeMUZYDx5ZwKSvy7e3TprFM=",
+        "npmDeps": "sha256-DA4hXek2vENuJ5w3J28ax3bqufW6UTgSCc0w0RImSZU=",
+        "vendor": "sha256-8hhf7TfoAx179nLKqZRyIdqIqW8aTHt4kb/unFdQbJ8="
+      },
+      "logreader": {
+        "rev": "1e5269208e574546dab6d19e556ee21a618d9eaf",
+        "src": "sha256-Ds+DIGwn2aP+cYkhl4scAkCX9YC9WZSlhbwLX6ZZGgA=",
+        "npmDeps": "sha256-9EQsckRV9Fa0WUmRRzofwC3lIchi+nTqrOaVINGgyBo=",
+        "vendor": "sha256-DhyLl8TyhZWnuSg6MZimeOwpeTCGDtskDqgekYBjvyc="
+      },
+      "nextcloud_announcements": {
+        "rev": "5df77e3f8dc916e463370466972245cd76257449",
+        "src": "sha256-XHOCpwm9MF/YlHV1LBeCBIj24GMI5Yobl1wN8xLkw54=",
+        "vendor": "sha256-3glHoj/NGfDJDaUJtV5Dkx5XAya5hPkVWBeleO8h26I="
+      },
+      "notifications": {
+        "rev": "93ab7d157815078463aaa8290f3d2a8ff40aef66",
+        "src": "sha256-RaKwnzBiL/GkYQHRh8kHHZJwGAznBY7oi+e+rNp7dCQ=",
+        "npmDeps": "sha256-YlQ2Herpmcq4nLcKzGLQth6sCVmjf3rAQ6/bGUWLkqE=",
+        "vendor": "sha256-UpmSjdakAwomxDDfA6oW0GIxj90ooZNTi/JT8pWgj4s="
+      },
+      "password_policy": {
+        "rev": "1b74ebf8359f93b5ce31d28b8ef879437370d9a4",
+        "src": "sha256-kyCR8AYor9Luz9Cuq9yafN3GmnEGaInL0O+v/KXP9+Y=",
+        "npmDeps": "sha256-X2xiWpzcd2SbTQFNLaeBtu3+DudtePfhZAoYZyIh4Z0=",
+        "vendor": "sha256-mZwcjeFeugMRWKZO0JG/KZ4OLsgzfMK8+dWgnBb6hcA="
+      },
+      "photos": {
+        "rev": "5ee586fc95079441065d6b8f2ca04bcb5038d21d",
+        "src": "sha256-kasnFU8leeva8P0gLr+WyEZ25wOooF/rsHqdV4fO7Vo=",
+        "npmDeps": "sha256-rBZZZDjk0DwGhPRYY+vtMIGGT9EetYfiuLZpaS4MXGw=",
+        "vendor": "sha256-pMVNYqTR84oacUXDPfeqLpQboDKqLyWFx5+wWd0DjfQ="
+      },
+      "privacy": {
+        "rev": "0aa531f62615c92236e0ce73f9fc198dd14636dc",
+        "src": "sha256-yDV9pB3o4HdhTOd9DyIFBhy1JLlrNOsHE1vRv+JKTQU=",
+        "npmDeps": "sha256-cR8WTUhC5wbKNIgrI1WQpijEuIgjnzcCJSyI8K4+gOk=",
+        "vendor": "sha256-mZN4bvZj0FXIwzbnPweK+Ptkf1P0oQWdtY/rgXyGb6A="
+      },
+      "related_resources": {
+        "rev": "412f9effad7ae7c845b0ba16ea9a9fec1e7708fe",
+        "src": "sha256-908q4FjDzqt9KmDWbDVp7H43uae74xcCVk1WfjKphx4=",
+        "npmDeps": "sha256-74cpGnyMZyQmw7y0Ddae475GR1/FwYspRYANWN6We8M=",
+        "vendor": "sha256-ueQ90WWlKqQe/otsNrUmDx1a+VNezqwmlL3ogksLku4="
+      },
+      "serverinfo": {
+        "rev": "9e15432bee17ed9fefa72bdfff46663baffaa38d",
+        "src": "sha256-sks8/RPx2BPF8vc1oxygPPwHMV1a89KxmwP5rGTIbbE=",
+        "vendor": "sha256-C0NVHktsxQzVN0JKBar1CKC/tXSt0mCUdNjlZnxDCp0="
+      },
+      "survey_client": {
+        "rev": "145d360a014390cfa0921891e583ae4725819bed",
+        "src": "sha256-uTURd/Y6Vsh5r8OUPmeJjRkn55DZOVJHyWEVKBHo1fQ=",
+        "vendor": "sha256-kTpUhuSi35ojlB2rC/R3pwnpk8wmQsq/X/0a6ZV/GfE="
+      },
+      "suspicious_login": {
+        "rev": "2e3f776335e4622e100079ad4722e762ea50f168",
+        "src": "sha256-vXHpD5dNqq0Lq+7lXRsfoNkXbsgIHXVd7YR2aX/rJvc=",
+        "vendor": "sha256-jmM6+Z9rcOo2cBKkh4YOKXFO2JzVwHtTVkrhY7+NVa4="
+      },
+      "text": {
+        "rev": "a0fa51ba1657a9ea1c6c3b195aab01eada430e4a",
+        "src": "sha256-Y+iQE5urXp+o3BvY91TGTLtmvjmuh+ew4LYW6Wzjvgo=",
+        "npmDeps": "sha256-rQ4owvUrmdWB2RaTgWycy2/a8emeTcz62N+Bz8lop4g=",
+        "vendor": "sha256-6IwX3r+MNS5IFFzM9DOXMKHRmo48n1j2bBqvOXOCTo0="
+      },
+      "twofactor_nextcloud_notification": {
+        "rev": "e0b2211f2c1e241b65e198e91fe08be91480bccc",
+        "src": "sha256-T9IuTUSseYu254clKbbFsKWqr3hXMSw02Bp71O4W8Bw=",
+        "npmDeps": "sha256-rIE2wpq7GjC/xpVNrD4ABnOko0jlBk5/kktRo+jZjzo=",
+        "vendor": "sha256-22PiC2jHjz6aMbEVG58509QQAHCpmaN7sI7jStd432w="
+      },
+      "twofactor_totp": {
+        "rev": "a69587ab67c3ef39b88a5f94edd53862f0454683",
+        "src": "sha256-SUu0HEiacLWvjnZtsrFQRjJG0DpPKyhrkOx/LR4Exhw=",
+        "npmDeps": "sha256-OeSfyMsXpceh4uIbnz0M+X19PBKoyGkSuR3Y7eHkdKk=",
+        "vendor": "sha256-hujpZN7gsqgmLbPNQBsyLswidaIcw6UNz9ZM59TvtK0="
+      },
+      "viewer": {
+        "rev": "11389bc0fbebe997e5f9281408af4679e0464ecf",
+        "src": "sha256-6pjxYKUSYGZhOFG9ImDKPQa1ihgZPB9p4g2p0kjVtWw=",
+        "npmDeps": "sha256-6Rz6lZVvuOFd1U1msOmfBr93R/3XHXE+3ILBUzsfngA=",
+        "vendor": "sha256-PhrXJ07q8avVe35XBtOyjARYs3bgUmOH84m5g5/+IPQ="
+      }
+    }
   }
 }
